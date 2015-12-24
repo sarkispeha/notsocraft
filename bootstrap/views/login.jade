@@ -1,0 +1,31 @@
+extends includes/header
+block content
+	.login
+
+		h2.text-shadow Create an account
+
+		form#signup-form(action="/createaccount", method="post")
+
+			input.input(type="text", name="name", required, placeholder="FULL NAME")
+
+			input.input(type="email", name="email", required,placeholder="EMAIL")
+
+			input.input(type="password", name="pass1",required, placeholder= "PASSWORD")
+
+			input.input(type="password", name="pass2",required, placeholder= "RE-ENTER PASSWORD")
+
+			button.btn#signup-button Sign Up!
+			div#signup-error
+
+
+		h2.text-shadow Login
+
+		form#login-form(action="/auth", method="post")
+
+			input.input(type="email", name="username", required, placeholder= "EMAIL")
+
+			input.input(type="password", name="password", required, placeholder= "PASSWORD")
+
+			button.btn#login-button Login
+
+			div#login-error
